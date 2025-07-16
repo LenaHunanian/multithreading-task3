@@ -44,7 +44,7 @@ class ViewController: UIViewController {
         //MARK: - test without dependency
         operationQueue.addOperations([opB, opA], waitUntilFinished: false)
         //MARK: CONCLUSION
-        //output: even though opB is cancelling inside opA, opB doesn't have dependency to opA, so they both start simultaneously, and opB.cancel() line doesn't matter anymore because opB has already started
+        //output: even though opB is cancelled inside opA, opB doesn't have dependency to opA, so they both start simultaneously, and opB.cancel() line doesn't matter anymore because opB has already started
         
     }
     
